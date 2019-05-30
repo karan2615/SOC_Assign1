@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>HTML Iframes</title>
+      <h1>My first sub window</h1>
+   </head>
+   <style>
+   body {
+       background-color:
+   }
+   iframe{
+       margin-left: auto;
+       margin-right: auto;
+   }
+   </style>
+
+   <body>
+    <div class="resizable">
+    <iframe src = "https://www.wikipedia.org" id ="myFrame" width = "400" height = "200"></iframe><br>
+    </div>
+    <select id="dropdown">
+        <option value="https://www.wikipedia.org">WIKIPEDIA</option>
+        <option value="https://www.google.com/webhp?igu=1">GOOGLE</option>
+        <option value="https://www.iitk.ac.in">IITK</option>
+    </select>
+
+    <button onclick="myFunction()">Go</button>
+    
+    <br><br>
+    <div id="div1">
+    Height: <input type="text" id="height"><br>
+    Width: <input type="text" id="width">
+    <br><br>
+    </div>
+    <button onclick="dimensions()">Submit</button>
+    <script>
+        function myFunction(){
+            var x=document.getElementById("dropdown");
+            var u = x.options[x.selectedIndex].value;    
+            document.getElementById("myFrame").src=u;
+        }
+
+        function dimensions(){
+            var x= document.getElementById("height").value;
+            var y=document.getElementById("width").value;
+            document.getElementById("myFrame").width=y;
+            document.getElementById("myFrame").height=x;
+        }
+    </script>
+
+
+
+      
+      
+   </body>
+	
+</html>
